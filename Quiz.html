@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="ja">
-	<head>
-	    <meta charset="UTF-8">
-	    <title>Quiz</title>
-	</head>
-	<body>
-		<script src="Quiz.js"></script>
-	</body>
+<head>
+  <meta charset="UTF-8" />
+  <title>クイズ</title>
+  <style>
+    body    { font-family: sans-serif; padding: 2rem; }
+    #quiz   { max-width: 600px; margin: auto; }
+    .choice { display: block; margin: .5rem 0; padding: .6rem 1rem; border: 1px solid #888; cursor: pointer; }
+    .choice:hover { background: #eee; }
+    #result { margin-top: 1.5rem; font-weight: bold; }
+    #next   { margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div id="quiz">
+    <h2 id="question">読み込み中...</h2>
+    <div id="choices"></div>
+    <div id="result"></div>
+    <button id="next" hidden>次の問題へ</button>
+  </div>
+
+  <script src="Quiz.js"></script>
+</body>
 </html>
